@@ -179,7 +179,7 @@ function App() {
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd} onDragMove={handleDragMove}>
       <div className="window-frame">
-        <div className="title-bar"><div className="title-text">A.A.F.F</div><div className="title-bar-buttons"><button className="window-button"></button><button className="window-button"></button><button className="window-button close">X</button></div></div>
+        <div className="title-bar"><div className="title-text">A.A.F.F</div><div className="title-bar-buttons"><button className="window-button close">X</button></div></div>
         <div className="game-container">
           {renderGameContent()}
         </div>
