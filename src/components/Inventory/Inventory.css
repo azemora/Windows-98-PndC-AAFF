@@ -1,0 +1,44 @@
+.inventory-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.inventory-window {
+  width: 500px;
+  position: absolute;
+  pointer-events: all;
+  display: flex; /* Adicionado para garantir o layout correto */
+  flex-direction: column; /* Adicionado para garantir o layout correto */
+}
+
+.inventory-window.initial-pos {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inventory-title-bar {
+  cursor: move;
+}
+
+.inventory-content {
+  min-height: 150px;
+}
+
+.empty-message {
+  color: #808080;
+  font-style: italic;
+  text-align: center;
+  width: 100%; /* Garante que o texto ocupe o espaço */
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
+}

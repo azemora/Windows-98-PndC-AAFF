@@ -1,0 +1,11 @@
+.hidden-red-gem-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;   
+  
+  /* Use a imagem de fundo que você criou */
+  background-image: url('../../assets/scene-hidden_gem2.png'); 
+  background-size: cover; 
+  background-position: center; 
+}

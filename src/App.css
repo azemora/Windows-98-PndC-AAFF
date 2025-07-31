@@ -1,0 +1,72 @@
+/* Estilo para a prévia do item que segue o mouse */
+.drag-overlay-item {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: grabbing;
+  pointer-events: none;
+}
+
+.drag-overlay-item img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* ADICIONADO: Estilo principal do botão que estava faltando */
+.inventory-button {
+  /* Posicionamento absoluto dentro do .game-container */
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  
+  /* Garante que o botão fique na frente da cena */
+  z-index: 900;
+
+  /* Estilo de botão Win98 */
+  background-color: #c0c0c0;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 1px 1px 1px black;
+  
+  /* Tamanho e layout interno */
+  width: 52px;
+  height: 48px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory-button:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  box-shadow: none;
+}
+
+/* Estilo para a imagem dentro do botão de inventário */
+.inventory-button-image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.intro-login-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

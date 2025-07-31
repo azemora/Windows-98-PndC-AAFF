@@ -1,0 +1,25 @@
+.interactive-object {
+  position: absolute;
+  /* 1. MUDADO: O cursor padrão agora é a seta normal */
+  cursor: default; 
+  transition: background-color 0.2s;
+}
+
+/* Estado de DEBUG (vermelho) */
+.interactive-object.debug-mode {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px dashed red;
+  /* 2. ADICIONADO: O cursor de "mãozinha" só aparece no modo debug */
+  cursor: pointer; 
+}
+
+/* Estado de FLASH de SUCESSO (verde sólido) */
+.interactive-object.success-flash {
+  background-color: rgba(0, 255, 0, 0.7) !important;
+  border: 2px solid #00ff00;
+}
+
+/* O hover cinza agora só aparece no modo de depuração */
+.interactive-object.debug-mode:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

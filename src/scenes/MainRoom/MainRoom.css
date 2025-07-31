@@ -1,0 +1,21 @@
+
+.interactive-object.door {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #8B4513;
+  cursor: pointer;
+}
+
+.main-room-scene {
+  width: 100%;
+  height: 100%;
+  /* ... o resto (background-image, etc) continua igual ... */
+  background-image: url('../../assets/scene-room-background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}

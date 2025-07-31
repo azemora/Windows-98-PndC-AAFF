@@ -1,0 +1,8 @@
+/* Adicione/Substitua por estas classes */
+.draggable-item { width: 58px; height: 58px; border: 1px solid #808080; background-color: #ffffff; display: flex; justify-content: center; align-items: center; cursor: grab; touch-action: none; }
+.draggable-item:active { cursor: grabbing; }
+.draggable-item img { max-width: 90%; max-height: 90%; pointer-events: none; }
+.key-icon-css { width: 32px; height: 32px; position: relative; transform: rotate(-45deg); }
+.key-head { position: absolute; top: 0; left: 0; width: 18px; height: 18px; background-color: #f6d85a; border: 2px solid; border-radius: 50%; border-top-color: #ffff8c; border-left-color: #ffff8c; border-right-color: #b59811; border-bottom-color: #b59811; }
+.key-bit { position: absolute; bottom: 0; right: -2px; width: 28px; height: 8px; background-color: #f6d85a; border: 2px solid; border-top-color: #ffff8c; border-left-color: #ffff8c; border-right-color: #b59811; border-bottom-color: #b59811; }
+.key-bit::after { content: ''; position: absolute; bottom: -4px; right: 0px; width: 4px; height: 4px; background-color: #f6d85a; border-left: 2px solid #b59811; border-bottom: 2px solid #b59811; }

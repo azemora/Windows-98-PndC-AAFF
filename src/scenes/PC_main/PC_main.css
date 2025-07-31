@@ -1,0 +1,9 @@
+.pc-main-scene {
+width: 100%;
+  height: 100%;
+  position: relative;
+  /* ADICIONE A IMAGEM DE FUNDO */
+  background-image: url('../../assets/scene-room-pc.png');
+  background-size: cover;
+  background-position: center;
+}
