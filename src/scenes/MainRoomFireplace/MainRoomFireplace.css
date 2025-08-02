@@ -5,7 +5,7 @@
   overflow: hidden;   
   
   /* Garanta que está usando a imagem de fundo SEM a chave */
-  background-image: url('../../assets/scene-room-mainfireplace_nokey.png'); 
+  background-image: url('../../assets/scene-room-mainfireplace_nokey.jpg'); 
   background-size: cover; 
   background-position: center; 
 }
