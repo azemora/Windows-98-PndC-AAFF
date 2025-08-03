@@ -16,3 +16,12 @@
   line-height: 1.2;
   text-shadow: 0 0 5px #00ff00;
 }
+
+.loading-progress {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  text-shadow: 0 0 8px #00ff00;
+}

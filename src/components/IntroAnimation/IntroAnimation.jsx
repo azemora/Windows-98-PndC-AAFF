@@ -1,37 +1,84 @@
 import React, { useState, useEffect } from 'react';
+import { assetsToPreload } from '../../database/assets.js';
 import './IntroAnimation.css';
 
-const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>!@#$%^*()-_+=[]{}|';
+const HACKER_TEXT = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=[]{}\\|;:",./<>?';
 
 function IntroAnimation({ onAnimationComplete }) {
-  const [lines, setLines] = useState(['']);
+  const [text, setText] = useState('');
+  const [progress, setProgress] = useState(0);
+  const [isAssetsLoaded, setIsAssetsLoaded] = useState(false);
+  const [isTimerFinished, setIsTimerFinished] = useState(false);
 
+  // Efeito principal: decide quando a animação/loading está completa
   useEffect(() => {
-    // Animação de texto caindo
-    const interval = setInterval(() => {
-      setLines(prevLines => {
-        const newLine = Array.from({ length: 50 }, () => CHARS[Math.floor(Math.random() * CHARS.length)]).join('');
-        // Mantém apenas as últimas 20 linhas para o efeito de scroll
-        return [...prevLines, newLine].slice(-20);
-      });
-    }, 100); // Adiciona uma nova linha a cada 100ms
-
-    // Transição para a tela de login após 5 segundos
-    const timer = setTimeout(() => {
+    // Só chama a função de completar quando AMBAS as condições forem verdadeiras
+    if (isAssetsLoaded && isTimerFinished) {
       onAnimationComplete();
-    }, 5000);
+    }
+  }, [isAssetsLoaded, isTimerFinished, onAnimationComplete]);
 
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timer);
+  // Efeito para o timer de 5 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTimerFinished(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Efeito para o pré-carregamento dos assets
+  useEffect(() => {
+    let loadedCount = 0;
+    const totalAssets = assetsToPreload.length;
+
+    if (totalAssets === 0) {
+      setIsAssetsLoaded(true);
+      return;
+    }
+
+    const updateProgress = () => {
+      loadedCount++;
+      const currentProgress = Math.round((loadedCount / totalAssets) * 100);
+      setProgress(currentProgress);
+      if (loadedCount === totalAssets) {
+        setIsAssetsLoaded(true);
+      }
     };
-  }, [onAnimationComplete]);
+
+    assetsToPreload.forEach(src => {
+      if (src.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.src = src;
+        video.oncanplaythrough = updateProgress;
+        video.onerror = updateProgress;
+      } else {
+        const img = new Image();
+        img.src = src;
+        img.onload = updateProgress;
+        img.onerror = updateProgress;
+      }
+    });
+  }, []);
+  
+  // Efeito para a animação de texto (visual)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let randomText = '';
+      for (let i = 0; i < 2000; i++) {
+        randomText += HACKER_TEXT[Math.floor(Math.random() * HACKER_TEXT.length)];
+      }
+      setText(randomText);
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="intro-animation-container">
-      {lines.map((line, index) => (
-        <p key={index}>{line}</p>
-      ))}
+      <pre>{text}</pre>
+      <div className="scan-line"></div>
+      <div className="loading-progress">
+        <p>CARREGANDO ARQUIVOS DO CASO... {progress}%</p>
+      </div>
     </div>
   );
 }
