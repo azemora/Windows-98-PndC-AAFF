@@ -77,7 +77,7 @@ function IntroAnimation({ onAnimationComplete }) {
       <pre>{text}</pre>
       <div className="scan-line"></div>
       <div className="loading-progress">
-        <p>CARREGANDO ARQUIVOS DO CASO... {progress}%</p>
+        <p>CARREGANDO ARQUIVOS DO CASO... V3 {progress}%</p>
       </div>
     </div>
   );
