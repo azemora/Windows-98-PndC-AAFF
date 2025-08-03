@@ -1,13 +1,13 @@
 // === IMAGENS DE FUNDO DAS CENAS ===
 import sceneMainRoom from '../assets/scene-room-background.png';
 import sceneTable from '../assets/scene-table-zoom.png';
-import sceneFireplace from '../assets/scene-fireplace-base.png';
+import sceneFireplace from '../assets/scene-room-mainfireplace-.png';
 import sceneLibrary from '../assets/scene-library.png';
 import sceneMap from '../assets/scene-map.png';
 import sceneSkeleton from '../assets/scene-room-skeleton.png';
-import sceneHiddenGem from '../assets/scene-hidden-gem.png';
+import sceneHiddenGem from '../assets/scene-hidden_gem.png';
 import sceneLibraryDrawer from '../assets/scene-library-drawer.png';
-import scenePCMain from '../assets/scene-room-pc-main.png';
+import scenePCMain from '../assets/scene-room-pc.png';
 import scenePCMap from '../assets/scene-room-pc-map.png';
 import scenePCGem from '../assets/scene-room-pc-gemunlocker.png';
 import sceneFinal from '../assets/scene-final.png';
