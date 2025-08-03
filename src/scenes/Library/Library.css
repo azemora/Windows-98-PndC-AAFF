@@ -38,7 +38,7 @@
   height: 100%;
   position: relative;
   /* ADICIONE A IMAGEM DE FUNDO */
-  background-image: url('../../assets/scene-room-library.png');
+  background-image: url('../../assets/scene-library.png');
   background-size: cover;
   background-position: center;
 }

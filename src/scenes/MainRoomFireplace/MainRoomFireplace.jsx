@@ -6,7 +6,7 @@ import './MainRoomFireplace.css';
 // Importe a IMAGEM DO ITEM que está no mundo
 import keyPiece1WorldImage from '../../assets/item_keypiece1_world.png';
 
-const KEY_PIECE_1_POS = { top: '310px', left: '410px', width: '50px', height: '50px' };
+const KEY_PIECE_1_POS = { top: '290px', left: '440px', width: '35px', height: '35px' };
 
 function MainRoomFireplace({ onNavigate, onObjectClick, debug, successFlashes, gameFlags }) {
   return (

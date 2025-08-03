@@ -1,7 +1,7 @@
 // === IMAGENS DE FUNDO DAS CENAS ===
 import sceneMainRoom from '../assets/scene-room-background.png';
 import sceneTable from '../assets/scene-table-zoom.png';
-import sceneFireplace from '../assets/scene-room-mainfireplace-.png';
+import sceneFireplace from '../assets/scene-room-mainfireplace.png';
 import sceneLibrary from '../assets/scene-library.png';
 import sceneMap from '../assets/scene-map.png';
 import sceneSkeleton from '../assets/scene-room-skeleton.png';
