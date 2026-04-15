@@ -1,0 +1,9 @@
+.horse-puzzle-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('../../assets/scene-room-horsepuzzle.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #0a0604;
+}

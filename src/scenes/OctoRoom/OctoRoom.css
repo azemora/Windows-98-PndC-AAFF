@@ -1,0 +1,8 @@
+.octo-room-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: #03080d;
+}

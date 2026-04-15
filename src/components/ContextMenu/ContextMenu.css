@@ -1,0 +1,29 @@
+.context-menu {
+  position: fixed; /* Posição relativa à janela do navegador */
+  z-index: 9999;
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  min-width: 120px;
+}
+
+.context-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #000080; /* Azul do Windows */
+  color: white;
+}

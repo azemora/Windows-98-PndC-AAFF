@@ -1,0 +1,119 @@
+.lock-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lock-window {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Body ──────────────────────────────────────────── */
+.lock-body {
+  background: #111;
+  padding: 24px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 0;
+}
+
+/* ── Wheels row ─────────────────────────────────────── */
+.lock-wheels {
+  display: flex;
+  gap: 12px;
+}
+
+.lock-wheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Arrow buttons ──────────────────────────────────── */
+.lock-arrow {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  width: 38px;
+  height: 24px;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lock-arrow:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.lock-arrow:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Character drum ─────────────────────────────────── */
+.lock-drum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0a0a0a;
+  border: 2px solid;
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #888;
+  border-bottom-color: #888;
+  width: 54px;
+  padding: 4px 0;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.lock-char {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+}
+.lock-char.active {
+  font-size: 32px;
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8800;
+}
+.lock-char.ghost {
+  font-size: 16px;
+  color: #444;
+}
+
+/* ── Solved overlay ─────────────────────────────────── */
+.lock-solved-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 180, 70, 0.55);
+  color: #44FF88;
+  font-family: 'Courier New', monospace;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-shadow: 0 0 20px #44FF88;
+  pointer-events: none;
+}

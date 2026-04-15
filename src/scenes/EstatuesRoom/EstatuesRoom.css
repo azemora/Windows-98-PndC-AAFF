@@ -1,0 +1,35 @@
+.estatues-room-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: #0d0b08;
+}
+
+.god-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: black;
+  z-index: 1000;
+}
+
+.god-fade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 2000;
+  animation: godFadeIn 1.5s ease forwards;
+}
+
+@keyframes godFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

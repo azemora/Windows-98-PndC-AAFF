@@ -1,0 +1,23 @@
+.map-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* ADICIONE A IMAGEM DE FUNDO */
+  background-image: url('../../assets/scene-room-map.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* A imagem do mapa que fica dentro do collider principal */
+.map-image-display {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Estilo para os colliders redondos das gemas */
+/* Adicione esta classe ao seu InteractiveObject.css para poder reutilizar */
+.interactive-object.round {
+  border-radius: 50%;
+}

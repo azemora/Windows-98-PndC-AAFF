@@ -1,0 +1,185 @@
+.wire-puzzle-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.wire-puzzle-window {
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wire-titlebar-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Win98-style generic button */
+.wire-btn {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  padding: 1px 8px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.wire-btn:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* ── Body ──────────────────────────────────────────── */
+.wire-puzzle-body {
+  background: #111111;
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ── Timer row ─────────────────────────────────────── */
+.wire-timer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.wire-combo-symbol {
+  font-size: 52px;
+  line-height: 1;
+  text-shadow: 0 0 16px currentColor;
+  user-select: none;
+}
+
+.wire-timer {
+  font-family: 'Courier New', monospace;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-align: center;
+  text-shadow: 0 0 12px currentColor;
+  margin-bottom: 0;
+  width: auto;
+}
+
+/* ── Puzzle canvas ──────────────────────────────────── */
+.wire-puzzle-area {
+  background: #0d0d0d;
+  border: 2px solid;
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #888888;
+  border-bottom-color: #888888;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.wire-svg {
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+
+/* ── Wire labels (left text) ────────────────────────── */
+.wire-label {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ── Port labels (right numbers) ────────────────────── */
+.port-label {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: #777;
+  pointer-events: none;
+}
+
+/* ── Wire endpoint circles ──────────────────────────── */
+.wire-node {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  z-index: 10;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.wire-node:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+.wire-node.dragging {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.35);
+  z-index: 20;
+}
+.wire-node.connected {
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* ── Port squares ────────────────────────────────────── */
+.port-node {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 2px solid;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+/* ── Win / lose overlays ────────────────────────────── */
+.wire-status-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  z-index: 50;
+  pointer-events: none;
+}
+.wire-status-overlay.won {
+  background: rgba(0, 160, 0, 0.65);
+  color: #44FF88;
+  text-shadow: 0 0 18px #44FF88;
+}
+.wire-status-overlay.lost {
+  background: rgba(160, 0, 0, 0.65);
+  color: #FF4444;
+  text-shadow: 0 0 18px #FF4444;
+}
+

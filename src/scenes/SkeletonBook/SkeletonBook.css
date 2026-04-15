@@ -1,0 +1,8 @@
+.skeleton-book-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('../../assets/scene-room-skeleton-book.jpg');
+  background-size: cover;
+  background-position: center;
+}
